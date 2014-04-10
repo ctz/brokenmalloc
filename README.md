@@ -35,7 +35,7 @@ You ask gdb (or `addr2line`) to tell you about this address:
 `lookup-syms.py` is a python script which automates this.  Give it the name of your
 binary and pipe in your `malloc.log`:
 
-    $ python lookup-syms.py ./prog < malloclog 
+    $ python lookup-syms.py ./prog < malloc.log 
     malloc(104) 1 ?? @ ??:0 -> default_malloc_ex @ /home/jbp/openssl/crypto/mem.c:79
 	                        -> CRYPTO_malloc @ /home/jbp/openssl/crypto/mem.c:307
 							-> EVP_DigestInit_ex @ /home/jbp/openssl/crypto/evp/digest.c:206
